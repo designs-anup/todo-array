@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do :: Array</title>
+</head>
+<body>
+    <form id="todoForm">
+        <input type="text" id="todoInput">
+        <button>Submit</button>
+    </form>
+    <ul id="todoList"></ul>
+</body>
+<script>
+const todoForm = document.getElementById("todoForm")
+const todoInput = document.getElementById("todoInput")
+const todoList = document.getElementById("todoList")
+
+const list = []
+
+// console.log("hi.....");
+
+todoForm.addEventListener("submit", function(e){
+    e.preventDefault()
+
+    // console.log("ssssss");
+
+    // console.log(todoInput.value);
+
+    let listArray = list.push(todoInput.value)
+
+    console.log(listArray);
+    console.log(list);
+
+    list.forEach(function(list, index){
+        console.log(index +" "+ list);
+    })
+
+
+    // todoList.innerHTML = list
+
+    todoInput.value = ""
+    
+})
+
+</script>
+</html>
